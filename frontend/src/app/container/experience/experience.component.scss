@@ -1,0 +1,33 @@
+.main-timeline {
+  position: relative;
+
+  .timeline-item {
+    position: relative;
+
+    .timeline-date {
+      @media (min-width: 768px) {
+        border-right: 2px solid var(--secondary-color);
+        // padding-right: 2rem;
+      }
+    }
+
+    .timeline-dot {
+      position: absolute;
+      width: 16px;
+      height: 16px;
+      background-color: white;
+      border: 3px solid var(--primary-color);
+      border-radius: 50%;
+      left: -9px;
+
+      @media (max-width: 767px) {
+        display: none;
+      }
+    }
+  }
+}
+
+.badge {
+  font-weight: 500;
+  padding: 0.5em 0.8em;
+}

@@ -1,0 +1,98 @@
+nav.desk {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  user-select: none;
+  background: hsl(0deg 4.44% 85.99% / 56%);
+  backdrop-filter: blur(6px);
+  z-index: 10;
+  padding: 15px;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+nav.desk a {
+  // width: 100%;
+  // line-height: 30px;
+  padding: 0 15px;
+  height: 30px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  color: var(--secondary-color);
+  background-color: var(--tertiary-color);
+  text-align: center;
+  display: block;
+  border: 1px solid var(--secondary-color);
+  border-radius: 15px;
+  box-sizing: border-box;
+}
+
+nav.desk a:hover {
+  background-color: var(--secondary-color);
+  color: var(--tertiary-color);
+}
+
+nav.desk a.active {
+  background-color: var(--primary-color);
+  color: var(--tertiary-color);
+}
+nav.mob,
+.hambtn {
+  display: none;
+}
+nav.mob a {
+  width: 100%;
+  line-height: 55px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  color: var(--secondary-color);
+  padding-left: 20px;
+  border: red 1 px solid;
+}
+nav.mob a:hover {
+  background-color: var(--tertiary-color);
+}
+
+nav.mob a.active {
+  background-color: var(--primary-color);
+  color: var(--tertiary-color);
+}
+.shownav {
+  display: block;
+}
+.dontshownav {
+  display: none;
+}
+@media screen and (max-width: 700px) {
+  nav.desk {
+    display: none;
+  }
+  nav.mob {
+    position: relative;
+    display: block;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--tertiary-color);
+  }
+  .hambtn {
+    display: block;
+    width: 100%;
+    background-color: var(--tertiary-color);
+    position: relative;
+  }
+  .hambtn .fa.fa-close {
+    position: fixed;
+    right: 0;
+    font-size: 35px;
+    padding: 15px;
+    color: var(--tertiary-color);
+    cursor: pointer;
+  }
+}

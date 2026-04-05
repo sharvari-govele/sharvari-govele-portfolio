@@ -1,0 +1,30 @@
+<div class="app-bottom-nav row ">
+  <div class="hambtn">
+    <i class="fa fa-bars"  *ngIf="!flag.navopen" (click)="flag.navopen=!flag.navopen" ></i>
+  </div>
+  @if(!this.router.url.includes('/home')){
+    <div class="mybtn col-auto ms-5"  role="button" 
+     onclick="window.open('https://drive.google.com/file/d/1_6ldPrHFyXP7cTD6-My8mUDn_yJJTtkt/view?usp=drive_link', '_blank')">
+     Download Resume</div>
+  }
+  <div class="col-auto ms-auto gap-4 d-flex flex-row">
+    <a href="https://www.linkedin.com/in/sharvari-govele" target="_blank">
+      <img src="assets/linkedin.png" alt="linkdin"
+    /></a>
+    <a href="https://github.com/sharvari-govele" target="_blank">
+      <img src="assets/github.png"
+    /></a>
+    <a
+      target="_blank"
+      href="https://www.facebook.com/people/Sharvari-Govele/pfbid02xrTtYkDrATPtc414GwS2ProBikpLfTkQeFBEPcx35ggs7MQDJhABESQJuNpCmG7fl/?mibextid=ZbWKwL"
+    >
+      <img src="assets/facebook.png"
+    /></a>
+    <a href="https://leetcode.com/sharvari-govele" target="_blank">
+      <img src="assets/leetcode.png"
+    /></a>
+    <a href="https://www.freecodecamp.org/Sharvari-Govele" target="_blank">
+      <img src="assets/freecodecamp.png"
+    /></a>
+  </div>
+</div>

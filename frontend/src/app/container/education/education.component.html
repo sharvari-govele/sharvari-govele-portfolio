@@ -1,0 +1,29 @@
+<div class="container py-5">
+  <div class="row g-4 p-2">
+    <div class="col-12 col-md-8">
+      <div class="education" *ngFor="let item of items">
+        <div class="container1">
+          <div class="font-style4">{{ item.year }}</div>
+          <div class="font-style1">{{ item.name }}</div>
+          <div class="font-style2">{{ item.university }}</div>
+          <div class="font-style3 text-muted">{{ item.institute }}</div>
+          <div class="badge bg-light text-dark border mt-1">
+            {{ item.result }}
+          </div>
+        </div>
+        <div class="container2">
+          <div class="circle"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-md-4">
+      <h3 class="h5 mb-4 border-bottom pb-2">Certifications</h3>
+      <div class="certi mb-4" *ngFor="let item of certificates">
+        <div class="fw-bold">{{ item.name }}</div>
+        <small class="d-block">{{ item.year }}</small>
+        <p class="text-muted mb-0 small">{{ item.source }}</p>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,22 @@
+<nav class="desk">
+    <a class=" " routerLink="/home" routerLinkActive="active" ariaCurrentWhenActive="page"><span>Home</span></a>
+    <a routerLink="/project" routerLinkActive="active" ariaCurrentWhenActive="page">Projects</a>
+    <a routerLink="/education" routerLinkActive="active" ariaCurrentWhenActive="page">Education</a>
+    <a routerLink="/experience" routerLinkActive="active" ariaCurrentWhenActive="page">Experience</a>
+    <a routerLink="/contact" routerLinkActive="active" ariaCurrentWhenActive="page">Contact Me</a>
+</nav>
+  
+<!--  -->
+
+<nav  class="mob">
+  <div class="hambtn">
+    <i class="fa fa-close" *ngIf="flag.navopen" (click)="flag.navopen=!flag.navopen" style="font-size: 36px"></i>
+  </div>
+  <div class="p-2" [ngClass]="{'shownav':flag.navopen ,'dontshownav':!flag.navopen,'d-grid':flag.navopen}">
+    <a class=" " routerLink="/home" routerLinkActive="active" ariaCurrentWhenActive="page" (click)="flag.navopen=!flag.navopen"><span>Home</span></a>
+    <a routerLink="/project" routerLinkActive="active" ariaCurrentWhenActive="page" (click)="flag.navopen=!flag.navopen">Projects</a>
+    <a routerLink="/education" routerLinkActive="active" ariaCurrentWhenActive="page" (click)="flag.navopen=!flag.navopen">Education</a>
+    <a routerLink="/experience" routerLinkActive="active" ariaCurrentWhenActive="page" (click)="flag.navopen=!flag.navopen">Experience</a>
+    <a routerLink="/contact" routerLinkActive="active" ariaCurrentWhenActive="page" (click)="flag.navopen=!flag.navopen">Contact Me</a>
+  </div>
+</nav>
