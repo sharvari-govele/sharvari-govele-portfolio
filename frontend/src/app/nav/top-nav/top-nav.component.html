@@ -1,22 +1,23 @@
 <nav class="desk">
-    <a class=" " routerLink="/home" routerLinkActive="active" ariaCurrentWhenActive="page"><span>Home</span></a>
-    <a routerLink="/project" routerLinkActive="active" ariaCurrentWhenActive="page">Projects</a>
-    <a routerLink="/education" routerLinkActive="active" ariaCurrentWhenActive="page">Education</a>
-    <a routerLink="/experience" routerLinkActive="active" ariaCurrentWhenActive="page">Experience</a>
-    <a routerLink="/contact" routerLinkActive="active" ariaCurrentWhenActive="page">Contact Me</a>
+  <a routerLink="/home" routerLinkActive="active" ariaCurrentWhenActive="page"><span>Home</span></a>
+  <a routerLink="/project" routerLinkActive="active" ariaCurrentWhenActive="page">Projects</a>
+  <a routerLink="/education" routerLinkActive="active" ariaCurrentWhenActive="page">Education</a>
+  <a routerLink="/experience" routerLinkActive="active" ariaCurrentWhenActive="page">Experience</a>
+  <a routerLink="/contact" routerLinkActive="active" ariaCurrentWhenActive="page">Contact Me</a>
 </nav>
-  
+
 <!--  -->
 
-<nav  class="mob">
+<nav class="mob">
   <div class="hambtn">
-    <i class="fa fa-close" *ngIf="flag.navopen" (click)="flag.navopen=!flag.navopen" style="font-size: 36px"></i>
+    <i class="fa fa-bars" *ngIf="!flag.navopen" (click)="$event.stopPropagation(); flag.navopen = true"></i>
+    <i class="fa fa-close" *ngIf="flag.navopen" (click)="$event.stopPropagation(); flag.navopen = false"></i>
   </div>
-  <div class="p-2" [ngClass]="{'shownav':flag.navopen ,'dontshownav':!flag.navopen,'d-grid':flag.navopen}">
-    <a class=" " routerLink="/home" routerLinkActive="active" ariaCurrentWhenActive="page" (click)="flag.navopen=!flag.navopen"><span>Home</span></a>
-    <a routerLink="/project" routerLinkActive="active" ariaCurrentWhenActive="page" (click)="flag.navopen=!flag.navopen">Projects</a>
-    <a routerLink="/education" routerLinkActive="active" ariaCurrentWhenActive="page" (click)="flag.navopen=!flag.navopen">Education</a>
-    <a routerLink="/experience" routerLinkActive="active" ariaCurrentWhenActive="page" (click)="flag.navopen=!flag.navopen">Experience</a>
-    <a routerLink="/contact" routerLinkActive="active" ariaCurrentWhenActive="page" (click)="flag.navopen=!flag.navopen">Contact Me</a>
+  <div class="p-2 shownav" *ngIf="flag.navopen">
+    <a routerLink="/home" routerLinkActive="active" (click)="flag.navopen = false">Home</a>
+    <a routerLink="/project" routerLinkActive="active" (click)="flag.navopen = false">Projects</a>
+    <a routerLink="/education" routerLinkActive="active" (click)="flag.navopen = false">Education</a>
+    <a routerLink="/experience" routerLinkActive="active" (click)="flag.navopen = false">Experience</a>
+    <a routerLink="/contact" routerLinkActive="active" (click)="flag.navopen = false">Contact Me</a>
   </div>
 </nav>

@@ -1,44 +1,44 @@
-.project-card {
-  height: 220px;
-  perspective: 1000px;
-  cursor: pointer;
+.project-container {
+  .project-card {
+    height: 220px;
+    perspective: 1000px;
+    cursor: pointer;
 
-  &-inner {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-    transform-style: preserve-3d;
+    &-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+      transform-style: preserve-3d;
 
-    // This class is triggered by the TS logic (Mobile)
-    &.is-flipped {
-      transform: rotateY(180deg);
-    }
-
-    // This handles the hover (Desktop)
-    @media (hover: hover) {
-      &:hover {
+      &.is-flipped {
         transform: rotateY(180deg);
+      }
+
+      @media (hover: hover) {
+        &:hover {
+          transform: rotateY(180deg);
+        }
       }
     }
   }
-}
 
-.card-side {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  backface-visibility: hidden;
-  border-radius: 15px;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  background: white;
-}
+  .card-side {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 15px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    background: white;
+  }
 
-.card-back {
-  transform: rotateY(180deg);
-  background: linear-gradient(
-    135deg,
-    var(--primary-color) 0%,
-    var(--primary-color) 100%
-  );
+  .card-back {
+    transform: rotateY(180deg);
+    background: linear-gradient(
+      135deg,
+      var(--primary-color) 0%,
+      var(--primary-color) 100%
+    );
+  }
 }

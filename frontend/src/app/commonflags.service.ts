@@ -4,6 +4,5 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class CommonflagsService {
-  navopen=false
-  constructor() { }
+  navopen = false
 }

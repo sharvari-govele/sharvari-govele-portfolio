@@ -9,7 +9,6 @@ import { MatSnackBar } from '@angular/material/snack-bar';
   styleUrl: './contact.component.scss'
 })
 export class ContactComponent {
-
   contactForm: FormGroup;
   isSentFailed: boolean = false;
   isSent: boolean = false;

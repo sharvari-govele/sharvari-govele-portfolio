@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { CommonflagsService } from './commonflags.service';
 
 @Component({
   selector: 'app-root',
@@ -7,7 +6,4 @@ import { CommonflagsService } from './commonflags.service';
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  constructor(public flag:CommonflagsService){
-
-  }
 }

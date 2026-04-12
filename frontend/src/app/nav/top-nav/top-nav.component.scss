@@ -13,9 +13,8 @@ nav.desk {
   gap: 20px;
   justify-content: center;
 }
+
 nav.desk a {
-  // width: 100%;
-  // line-height: 30px;
   padding: 0 15px;
   height: 30px;
   text-transform: uppercase;
@@ -40,12 +39,15 @@ nav.desk a.active {
   background-color: var(--primary-color);
   color: var(--tertiary-color);
 }
+
 nav.mob,
 .hambtn {
   display: none;
+  z-index: 999;
 }
+
 nav.mob a {
-  width: 100%;
+  width: 90%;
   line-height: 55px;
   text-transform: uppercase;
   cursor: pointer;
@@ -55,6 +57,7 @@ nav.mob a {
   padding-left: 20px;
   border: red 1 px solid;
 }
+
 nav.mob a:hover {
   background-color: var(--tertiary-color);
 }
@@ -63,36 +66,48 @@ nav.mob a.active {
   background-color: var(--primary-color);
   color: var(--tertiary-color);
 }
-.shownav {
-  display: block;
-}
+
 .dontshownav {
-  display: none;
+  display: none !important;
+  pointer-events: none;
 }
+
+.shownav {
+  display: flex;
+  flex-direction: column;
+}
+
+
 @media screen and (max-width: 700px) {
   nav.desk {
     display: none;
   }
+
   nav.mob {
-    position: relative;
+    position: fixed;
     display: block;
     top: 0;
     left: 0;
     width: 100%;
     background-color: var(--tertiary-color);
   }
+
   .hambtn {
+    color: var(--primary-color);
     display: block;
-    width: 100%;
-    background-color: var(--tertiary-color);
-    position: relative;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    float: right;
   }
-  .hambtn .fa.fa-close {
+
+  .hambtn .fa.fa-close,
+  .fa.fa-bars {
     position: fixed;
     right: 0;
-    font-size: 35px;
-    padding: 15px;
-    color: var(--tertiary-color);
+    width: 50px;
+    height: 50px;
+    color: var(--primary-color);
     cursor: pointer;
   }
 }

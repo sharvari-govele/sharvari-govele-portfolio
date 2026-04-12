@@ -1,44 +1,45 @@
+.education-container {
+  .education {
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+    margin-bottom: 1.5rem;
 
-.education {
-  display: flex;
-  justify-content: flex-end;
-  gap: 20px;
-  margin-bottom: 1.5rem;
-
-  .container2::after {
-    content: "";
-    position: absolute;
-    top: 25px; // Starts below the circle
-    bottom: -25px; // Reaches toward the next item
-    width: 2px;
-    background-color: var(--secondary-color);
-    left: 50%;
-    transform: translateX(-50%);
+    .container2::after {
+      content: "";
+      position: absolute;
+      top: 25px;
+      bottom: -25px;
+      width: 2px;
+      background-color: var(--secondary-color);
+      left: 50%;
+      transform: translateX(-50%);
+    }
   }
-}
 
-.container1 {
-  flex: 1;
-  text-align: right;
-  padding-bottom: 10px;
-  
-  @media (max-width: 767px) {
-    text-align: left;
+  .container1 {
+    flex: 1;
+    text-align: right;
+    padding-bottom: 10px;
+
+    @media (max-width: 767px) {
+      text-align: left;
+    }
   }
-}
 
-.container2 {
-  position: relative;
-  width: 30px;
-  display: flex;
-  justify-content: center;
+  .container2 {
+    position: relative;
+    width: 30px;
+    display: flex;
+    justify-content: center;
 
-  .circle {
-    height: 15px;
-    width: 15px;
-    border-radius: 50%;
-    background-color: #fff;
-    border: 3px solid var(--primary-color);
-    margin-top: 8px;
+    .circle {
+      height: 15px;
+      width: 15px;
+      border-radius: 50%;
+      background-color: #fff;
+      border: 3px solid var(--primary-color);
+      margin-top: 8px;
+    }
   }
 }

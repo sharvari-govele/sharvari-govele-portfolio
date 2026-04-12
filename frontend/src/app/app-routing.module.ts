@@ -13,11 +13,7 @@ const routes: Routes = [
   { path: 'experience', component: ExperienceComponent },
   { path: 'home', component: HomeComponent },
   { path: 'project', component: ProjectComponent },
-  {
-    path: '',
-    redirectTo: '/home',
-    pathMatch: 'full'
-  },
+  { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: '**', component: NotfoundComponent }
 ];
 

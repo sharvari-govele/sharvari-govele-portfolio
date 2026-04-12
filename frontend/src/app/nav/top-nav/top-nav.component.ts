@@ -7,10 +7,5 @@ import { CommonflagsService } from '../../commonflags.service';
   styleUrl: './top-nav.component.scss'
 })
 export class topnavComponent {
-  navopen=false
-  openverticalnav(){
-
-  }
-  constructor(public flag:CommonflagsService){
-  }
+  constructor(public flag: CommonflagsService) { }
 }

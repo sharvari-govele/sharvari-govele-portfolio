@@ -7,13 +7,13 @@ import { CommonflagsService } from '../commonflags.service';
   styleUrl: './container.component.scss'
 })
 export class ContainerComponent {
-constructor(private ref:ElementRef,public flag:CommonflagsService){
+  constructor(private ref: ElementRef, public flag: CommonflagsService) {
 
-}
-@HostListener('document:click',['$event'])
-handleClickOutside(event:Event){
-  if(this.ref.nativeElement.contains(event?.target)){
-    this.flag.navopen=!this.flag.navopen
   }
-}
+  @HostListener('document:click', ['$event'])
+  handleClickOutside(event: Event) {
+    if (this.ref.nativeElement.contains(event?.target)) {
+      this.flag.navopen = !this.flag.navopen
+    }
+  }
 }

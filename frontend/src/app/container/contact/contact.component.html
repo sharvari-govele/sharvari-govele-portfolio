@@ -1,8 +1,6 @@
 <div class="contact-container">
   <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
     <h2>Get in Touch</h2>
-
-    <!-- Name Field -->
     <div class="form-group">
       <label for="name">Full Name</label>
       <input
@@ -21,7 +19,6 @@
       >
     </div>
 
-    <!-- Email Field -->
     <div class="form-group">
       <label for="email">Email Address</label>
       <input
@@ -41,7 +38,6 @@
       >
     </div>
 
-    <!-- Message Field -->
     <div class="form-group">
       <label for="message">Message</label>
       <textarea
@@ -52,15 +48,10 @@
       ></textarea>
     </div>
 
-    <!-- Submit Button -->
     @if (isSentFailed) {
-      <button type="submit" class="mybtn">
-        Failed to sent message
-      </button>
+      <button type="submit" class="mybtn">Failed to sent message</button>
     } @else if (isSent) {
-      <button type="submit" class="mybtn">
-        Message sent successfully
-      </button>
+      <button type="submit" class="mybtn">Message sent successfully</button>
     } @else {
       <button type="submit" [disabled]="contactForm.invalid" class="mybtn">
         @if (!loading) {

@@ -7,22 +7,20 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-// 1. Set up the "Transporter" (Your Email login)
 const transporter = nodemailer.createTransport({
   service: 'gmail',
   auth: {
     user: 'sharvarigovele777@gmail.com', 
-    pass: 'hitjmehbimvvxuam' // Get this from Google Security
+    pass: 'hitjmehbimvvxuam' 
   }
 });
 
-// 2. Create the route to receive form data
 app.post('/api/contact', (req, res) => {
   const { name, email, message } = req.body;
 
   const mailOptions = {
     from: email,
-    to: 'sharvarigovele777@gmail.com', // Where you want to receive the mail
+    to: 'sharvarigovele777@gmail.com',
     replyTo: email, 
     subject: `New Portfolio Message from ${name}`,
     text: `Sender Email: ${email}\n\nMessage:\n${message}`
