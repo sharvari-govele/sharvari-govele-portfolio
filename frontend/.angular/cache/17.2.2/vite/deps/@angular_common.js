@@ -97,11 +97,9 @@ import {
   provideImgixLoader,
   provideNetlifyLoader,
   registerLocaleData,
-  setRootDomAdapter
+  setRootDomAdapter,
 } from "./chunk-53NVKCCG.js";
-import {
-  IMAGE_CONFIG
-} from "./chunk-74DU7V4E.js";
+import { IMAGE_CONFIG } from "./chunk-74DU7V4E.js";
 export {
   APP_BASE_HREF,
   AsyncPipe,
@@ -203,6 +201,6 @@ export {
   getDOM as ɵgetDOM,
   normalizeQueryParams as ɵnormalizeQueryParams,
   parseCookieValue as ɵparseCookieValue,
-  setRootDomAdapter as ɵsetRootDomAdapter
+  setRootDomAdapter as ɵsetRootDomAdapter,
 };
 //# sourceMappingURL=@angular_common.js.map

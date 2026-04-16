@@ -1,15 +1,23 @@
-/* You can add global styles to this file, and also import other style files */
 * {
   margin: 0;
   padding: 0;
+  font-family: "Inter", sans-serif;
 }
+
 body {
   background-color: rgb(253, 252, 252);
 }
+
 :root {
   --primary-color: #622569;
   --secondary-color: #8c74a8;
   --tertiary-color: #fde6f0;
+}
+
+.font-style {
+  font-size: 48px;
+  font-weight: 700;
+  color: var(--primary-color);
 }
 
 .font-style1 {
@@ -17,18 +25,44 @@ body {
   font-weight: 700;
   color: var(--primary-color);
 }
+
 .font-style2 {
   font-size: 20px;
   font-weight: 500;
   color: var(--secondary-color);
-
 }
+
 .font-style3 {
   font-size: 14px;
   font-weight: 600;
 }
+
 .font-style4 {
   font-size: 16px;
   font-weight: 700;
+}
 
+@media screen and (max-width: 768px) {
+  .font-style {
+    font-size: 24px;
+  }
+
+  .font-style1 {
+    font-size: 20px;
+  }
+
+  .font-style2 {
+    font-size: 18px;
+  }
+
+  html,
+  body {
+    overflow-x: hidden;
+  }
+
+  .container,
+  .container-fluid {
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+  }
 }

@@ -3,14 +3,24 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-project',
   templateUrl: './project.component.html',
-  styleUrl: './project.component.scss'
+  styleUrl: './project.component.scss',
 })
 export class ProjectComponent {
   flippedIndex: number = -1;
 
   projects = [
-    { name: 'StopWatch', icon: 'stopwatch', details: 'StopWatch using angular pipe', url: 'https://stop-watch-angular-pipe.vercel.app/' },
-    { name: 'Node.js', icon: '🟢', details: 'Developed RESTful APIs...', url: 'https://nodejs.org' },
+    {
+      name: 'StopWatch',
+      icon: 'stopwatch',
+      details: 'StopWatch using angular pipe',
+      url: 'https://stop-watch-angular-pipe.vercel.app/',
+    },
+    {
+      name: 'Node.js',
+      icon: '🟢',
+      details: 'Developed RESTful APIs...',
+      url: 'https://nodejs.org',
+    },
   ];
 
   toggleFlip(index: number) {
@@ -21,4 +31,3 @@ export class ProjectComponent {
     window.open(url, '_blank');
   }
 }
-

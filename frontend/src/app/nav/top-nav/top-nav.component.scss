@@ -77,7 +77,6 @@ nav.mob a.active {
   flex-direction: column;
 }
 
-
 @media screen and (max-width: 700px) {
   nav.desk {
     display: none;
@@ -104,9 +103,7 @@ nav.mob a.active {
   .hambtn .fa.fa-close,
   .fa.fa-bars {
     position: fixed;
-    right: 0;
-    width: 50px;
-    height: 50px;
+    font-size: 25px;
     color: var(--primary-color);
     cursor: pointer;
   }
