@@ -1,31 +1,9 @@
 <nav class="desk">
-  <a routerLink="/home" routerLinkActive="active" ariaCurrentWhenActive="page"
-    ><span>Home</span></a
-  >
-  <a
-    routerLink="/project"
-    routerLinkActive="active"
-    ariaCurrentWhenActive="page"
-    >Projects</a
-  >
-  <a
-    routerLink="/education"
-    routerLinkActive="active"
-    ariaCurrentWhenActive="page"
-    >Education</a
-  >
-  <a
-    routerLink="/experience"
-    routerLinkActive="active"
-    ariaCurrentWhenActive="page"
-    >Experience</a
-  >
-  <a
-    routerLink="/contact"
-    routerLinkActive="active"
-    ariaCurrentWhenActive="page"
-    >Contact Me</a
-  >
+  <a (click)="scrollTo('home')"><span>Home</span></a>
+  <a (click)="scrollTo('experience')">Experience</a>
+  <a (click)="scrollTo('education')">Education</a>
+  <a (click)="scrollTo('project')">Projects</a>
+  <a (click)="scrollTo('contact')">Contact Me</a>
 </nav>
 
 <!--  -->
@@ -44,35 +22,10 @@
     ></i>
   </div>
   <div class="p-2 shownav" *ngIf="flag.navopen">
-    <a
-      routerLink="/home"
-      routerLinkActive="active"
-      (click)="flag.navopen = false"
-      >Home</a
-    >
-    <a
-      routerLink="/project"
-      routerLinkActive="active"
-      (click)="flag.navopen = false"
-      >Projects</a
-    >
-    <a
-      routerLink="/education"
-      routerLinkActive="active"
-      (click)="flag.navopen = false"
-      >Education</a
-    >
-    <a
-      routerLink="/experience"
-      routerLinkActive="active"
-      (click)="flag.navopen = false"
-      >Experience</a
-    >
-    <a
-      routerLink="/contact"
-      routerLinkActive="active"
-      (click)="flag.navopen = false"
-      >Contact Me</a
-    >
+    <a (click)="scrollTo('home'); flag.navopen = false">Home</a>
+    <a (click)="scrollTo('experience'); flag.navopen = false">Experience</a>
+    <a (click)="scrollTo('education'); flag.navopen = false">Education</a>
+    <a (click)="scrollTo('project'); flag.navopen = false">Projects</a>
+    <a (click)="scrollTo('contact'); flag.navopen = false">Contact Me</a>
   </div>
 </nav>

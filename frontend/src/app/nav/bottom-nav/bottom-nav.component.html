@@ -1,18 +1,16 @@
-<div class="app-bottom-nav row">
-  @if (!this.router.url.includes("/home")) {
-    <div
-      class="mybtn col-12 col-md-auto ms-md-5 mb-2 mb-md-0 text-center"
-      role="button"
-      onclick="
-        window.open(
-          'https://drive.google.com/file/d/1_6ldPrHFyXP7cTD6-My8mUDn_yJJTtkt/view?usp=drive_link',
-          '_blank',
-        )
-      "
-    >
-      Download Resume
-    </div>
-  }
+<div class="app-bottom-nav row" [class.nav-visible]="showNav">
+  <div
+    class="mybtn col-12 col-md-auto ms-md-5 mb-2 mb-md-0 text-center"
+    role="button"
+    onclick="
+      window.open(
+        'https://drive.google.com/file/d/1_6ldPrHFyXP7cTD6-My8mUDn_yJJTtkt/view?usp=drive_link',
+        '_blank',
+      )
+    "
+  >
+    Download Resume
+  </div>
   <div class="col-12 col-md-auto ms-md-auto gap-3 gap-md-4 d-flex flex-row justify-content-center">
     <a href="https://www.linkedin.com/in/sharvari-govele" target="_blank">
       <img src="assets/linkedin.png" alt="linkdin"

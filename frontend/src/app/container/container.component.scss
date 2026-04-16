@@ -1,0 +1,11 @@
+.sections-container > * {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.sections-container > app-home {
+  padding-top: 0;
+  min-height: 100vh;
+}
