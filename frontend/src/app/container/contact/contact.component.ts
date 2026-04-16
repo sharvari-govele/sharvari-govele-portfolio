@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { environment } from '../../../environments/environment';
 
 @Component({
   selector: 'app-contact',
@@ -29,7 +30,7 @@ export class ContactComponent {
       console.log(this.contactForm.value);
       this.loading = true;
       this.http
-        .post('http://localhost:3000/api/contact', this.contactForm.value)
+        .post(`${environment.apiUrl}/api/contact`, this.contactForm.value)
         .subscribe({
           next: (res) => {
             this.loading = false;
