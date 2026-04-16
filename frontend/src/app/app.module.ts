@@ -15,7 +15,7 @@ import { ProjectComponent } from './container/project/project.component';
 import { bottomnavComponent } from './nav/bottom-nav/bottom-nav.component';
 import { topnavComponent } from './nav/top-nav/top-nav.component';
 import { ReactiveFormsModule } from '@angular/forms';
-import { provideHttpClient } from '@angular/common/http';
+import { provideHttpClient, withFetch } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -31,7 +31,7 @@ import { provideHttpClient } from '@angular/common/http';
     EducationComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, ReactiveFormsModule],
-  providers: [provideHttpClient(), provideClientHydration()],
+  providers: [provideHttpClient(withFetch()), provideClientHydration()],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

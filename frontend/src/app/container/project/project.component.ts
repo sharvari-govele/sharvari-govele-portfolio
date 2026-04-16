@@ -11,7 +11,7 @@ export class ProjectComponent {
   projects = [
     {
       name: 'StopWatch',
-      icon: 'stopwatch',
+      icon: '../../../assets/stopwatch.png',
       details: 'StopWatch using angular pipe',
       url: 'https://stop-watch-angular-pipe.vercel.app/',
     },
