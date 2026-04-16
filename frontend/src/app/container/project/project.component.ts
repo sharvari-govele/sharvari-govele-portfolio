@@ -10,15 +10,15 @@ export class ProjectComponent {
 
   projects = [
     {
-      name: 'StopWatch',
+      name: 'Stop Watch',
       icon: '../../../assets/stopwatch.png',
       details: 'StopWatch using angular pipe',
       url: 'https://stop-watch-angular-pipe.vercel.app/',
     },
     {
-      name: 'Node.js',
+      name: 'To Do List',
       icon: '🟢',
-      details: 'Developed RESTful APIs...',
+      details: 'Keep track of your tasks using Nodejs and angular',
       url: 'https://nodejs.org',
     },
   ];
