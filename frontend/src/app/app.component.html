@@ -1,7 +1,11 @@
 <div class="container-fluid">
   <div class="row d-flex">
-    <app-top-nav class="top-nav"></app-top-nav>
-    <app-container class="main-container"></app-container>
-    <app-bottom-nav class="bottom-nav"></app-bottom-nav>
+    @if (showNav) {
+      <app-top-nav class="top-nav"></app-top-nav>
+    }
+    <router-outlet></router-outlet>
+    @if (showNav) {
+      <app-bottom-nav class="bottom-nav"></app-bottom-nav>
+    }
   </div>
 </div>
